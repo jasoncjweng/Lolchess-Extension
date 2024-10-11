@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Lolchess Twitch Extension",
+    "version": "0.0.1",
+    "description": "Display TFT Rank in Twitch Chat",
+    "permissions":["activeTab", "identity", "storage"],
+    "content_scripts": [{
+      "matches": ["https://www.twitch.tv/*"],
+      "js": ["chat.js"]
+    }],
+    "web_accessible_resources": [
+      {
+        "resources": ["images/*"],
+        "matches": ["https://www.twitch.tv/*"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "images/pengu.png"
+    }    
+  }
