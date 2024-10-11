@@ -1,0 +1,50 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>TFT Rank Tracker</title>
+  <style>
+    body {
+            width: 350px;
+            height: 80px;
+        }
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #myButton {
+      appearance: none;
+      background-color: #2ea44f;
+      border: 1px solid rgba(27, 31, 35, .15);
+      border-radius: 6px;
+      box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 35px;
+      width: 120px;
+      text-align: center;
+      touch-action: manipulation;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="rank_info"></h1>
+  <div class="button-container">
+    <h2>Connect to Riot</h2>
+    <input type="text" id="RiotTextBox" placeholder="Type something here">
+    <button id="myButton" class = 'riotButton'>Authorize</button>
+  </div>
+  <div class="button-container">
+    <h2>Connect to Twitch</h2>
+    <button id="myButton" class = 'twitchButton'>Authorize</button>
+  </div>
+  <iframe id="twitchOAuth" src ="about:blank" style="display:none"></iframe>
+  <script src="popup.js"></script> 
+  <script src="chat.js"></script>
+</body>
+</html>
