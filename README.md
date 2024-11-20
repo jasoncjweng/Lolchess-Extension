@@ -1,2 +1,2 @@
 # Lolchess-Extension
-Displays TFT rank next to username in twitch chat.
+Chrome extension that displays TFT rank next to username in twitch chat.
